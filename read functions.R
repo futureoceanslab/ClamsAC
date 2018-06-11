@@ -56,3 +56,5 @@ if(!require(corrplot)){
 require(corrplot)
 packageVersion("corrplot")
 # [1] ‘0.77’
+
+library(stats)
