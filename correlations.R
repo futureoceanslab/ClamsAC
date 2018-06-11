@@ -5,6 +5,8 @@ eco_indicators <- eco_indicators [, c(3:8)]
 
 eco_indicators_cor <- cor(eco_indicators, use = "pairwise.complete.obs")
 p1 <- corrplot(eco_indicators_cor, order ="AOE")
+N1 <- eco_indicators_cor
+write.csv(N1, file = "data2/N1.csv") 
 
 #Read SAC indicators
 SAC_indicators <- read.csv2("data/SAC indicators.csv")
