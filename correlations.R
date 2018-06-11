@@ -14,6 +14,8 @@ SAC_indicators <- SAC_indicators [, c(3:14)]
 
 SAC_indicators_cor <- cor(SAC_indicators, use = "pairwise.complete.obs")
 p2 <- corrplot(SAC_indicators_cor, order ="AOE")
+N2 <-SAC_indicators_cor
+write.csv(N2,file = "data2/N2.csv")
 
 #Read SS indicators
 SS_indicators <- read.csv2("data/SS indicators.csv")
@@ -21,4 +23,5 @@ SS_indicators <-SS_indicators [, c(3:7)]
 
 SS_indicators_cor <- cor(SS_indicators, use = "pairwise.complete.obs")
 p2 <- corrplot(SS_indicators_cor, order ="AOE")
-SS_indicators_cor
+N3 <-SS_indicators_cor
+write.csv(N3,file = "data2/N3.csv")
