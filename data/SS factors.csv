@@ -1,7 +1,7 @@
-ID	guild 	SEA_CONDITION	DIV_RESOURCE	DEPENDENCE
-1	Baiona	0	1	0,02
-3	Cambados	0	2	0,5
-6	Carril	1	0,5	0,2
-2	Arcade	0	0	0,45
-5	Moaña	0	1,67	0,9
-4	Campelo	0	1,83	2
+ID;guild ;SEA_CONDITION;DIV_RESOURCE;DEPENDENCE
+1;Baiona;0;1;0,02
+3;Cambados;0;2;0,5
+6;Carril;1;0,5;0,2
+2;Arcade;0;0;0,45
+5;Moaña ;0;1,67;0,9
+4;Campelo;0;1,83;2
