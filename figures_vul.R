@@ -30,36 +30,29 @@ data <- left_join(data, data_EV, by="guild")                            #to comb
 data_SS$guild <- as.character(data_SS$guild)                            #to convert column name "guild" into  a character
 
 
-##Figure SAC - SIP - EV
+##Figure 1:  SAC - EV - V
 
-data$guild <- as.factor(data$guild)
-f1 <- ggplot(data, aes(SAC,SIP, label = guild)) +
-  geom_jitter(alpha=0.8, aes(color=guild, size=EV),
-              position = position_jitter(width = .001))+
-  geom_text_repel(data=data, size=3, vjust=1)+
-  #geom_text_repel(data=subset(latitude, latitude$b_value>100), size=3, vjust=1)+
-  #ggtitle("")+
+data$guild <- as.factor(data$guild)                              #convert guild in a factor so that I can label later
+
+f1 <- ggplot(data, aes(SAC,EV, label = guild)) +                #ggplot for figure 1, using data 
+  geom_jitter(alpha=0.8, aes(color=V),
+              position = position_jitter(width = .001), size=10)+
+  geom_text_repel(data=data, size=3.5,hjust=1.1)+
   xlab("Social Adaptive Capacity")+
-  ylab("Social Impact Potential")+
+  ylab("Ecological vulnerability")+
   theme(legend.position="right")+
+  labs(colour = "Vulnerability score")+
+  scale_color_gradient(low = "skyblue2", high = "skyblue4")+
   theme_minimal()+
-  ylim(0,1.5)+
+  ylim(-0.1,1.5)+
   xlim(0,1)
 f1
 
 
-f2 <- ggplot(data, aes(SAC,EV, label = guild)) +
-  geom_jitter(alpha=0.8, aes(color=V),
-              position = position_jitter(width = .001), size=8)+
-  geom_text_repel(data=data, size=3.5,hjust=0.8)+
-  xlab("Social Adaptive Capacity")+
-  ylab("Ecological vulnerability")+
-  theme(legend.position="right")+
-  labs(colour = "Vulnerability scores")+
-  theme_minimal()+
-  ylim(-0.1,1.5)+
-  xlim(0,1)
-f2
+##Saving the figure in /Figures:
+
+ggsave("Figures/Figure 1.png", dpi = 600)
+
 
 
 
