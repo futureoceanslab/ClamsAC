@@ -49,16 +49,15 @@ f1
 
 
 f2 <- ggplot(data, aes(SAC,EV, label = guild)) +
-  geom_jitter(alpha=0.8, aes(color=guild, size=SIP),
-              position = position_jitter(width = .001))+
-  geom_text_repel(data=data, size=3, vjust=1)+
-  #geom_text_repel(data=subset(latitude, latitude$b_value>100), size=3, vjust=1)+
-  #ggtitle("")+
+  geom_jitter(alpha=0.8, aes(color=V),
+              position = position_jitter(width = .001), size=8)+
+  geom_text_repel(data=data, size=3.5,hjust=0.8)+
   xlab("Social Adaptive Capacity")+
   ylab("Ecological vulnerability")+
   theme(legend.position="right")+
+  labs(colour = "Vulnerability scores")+
   theme_minimal()+
-  ylim(0,1.5)+
+  ylim(-0.1,1.5)+
   xlim(0,1)
 f2
 
