@@ -24,8 +24,8 @@ data_EV <- data_EV[1:6,]                                                #delete 
 
 data$guild <- as.character(data$guild)                                  #to convert column name "guild" into  a character
 data_EV$guild <- as.character(data_EV$guild)                            #to convert column name "guild" into  a character
-data_EV$guild[data_EV$guild == "Moana "] <-"Moaña"                      #to correct Moaña    to be common among data files 
-data$guild[data$guild == "Moaña "] <-"Moaña"                            #to correct Moaña    to be common among data files 
+data_EV$guild[data_EV$guild == "Moana "] <-"MoaÃ±a"                      #to correct MoaÃ±a    to be common among data files 
+data$guild[data$guild == "MoaÃ±a "] <-"MoaÃ±a"                            #to correct MoaÃ±a    to be common among data files 
 
 data <- left_join(data, data_EV, by="guild")                            #to combine data and data_EV by the joint column "guild"
 
@@ -66,7 +66,7 @@ data_SAC <- read.csv("data_vul/SAC indicators.csv", sep=";")                 #op
 
 ##add the SAC score
 data_SAC$guild <- as.character(data_SAC$guild)                            #to convert column name "guild" into  a character
-data_SAC$guild[data_SAC$guild == "Moana "] <-"Moaña"                      #to correct Moaña    to be common among data files 
+data_SAC$guild[data_SAC$guild == "Moana "] <-"MoaÃ±a"                      #to correct MoaÃ±a    to be common among data files 
 data_SAC <- data_SAC[1:6,]                                                #to delete average and min and max values
 
 data$guild <- as.character(data$guild)                                     #to convert guild from factor to character in data to merge
@@ -83,7 +83,7 @@ data_long <- data_long %>%
 data_long$suma <- as.factor(data_long$suma)
 data_long$suma <- as.numeric(data_long$suma)
 
-g <- ggplot(x, aes(reorder(variable, value), value))
+#how to order variables for ggplot? g <- ggplot(x, aes(reorder(variable, value), value))
 
 f2 <-  ggplot(data_long, aes(reorder(indicator, suma), value, fill = guild)) + 
   geom_bar(stat = "identity", position = "stack", width=0.7)+
