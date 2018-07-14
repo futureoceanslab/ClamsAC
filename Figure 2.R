@@ -65,7 +65,7 @@ f1 <- ggplot(data, aes(EV,SAC, label = guild)) +                #ggplot for figu
   labs(colour = "Vulnerability score")+
   scale_color_gradient(low = "skyblue2", high = "skyblue4")+
   theme_minimal()+
-  ylim(0,1)+
+  ylim(0,1)+ 
   xlim(-0.1,1.5)
 f1
 ##Saving the figure in /Figures:

@@ -1,0 +1,7 @@
+guild 	biomass	turf area	Biodiversity
+Baiona	0.00	0.04	0.50
+Cambados	0.25	1.00	1.00
+Carril	0.04	0.13	0.13
+Arcade	0.24	0.00	0.00
+Moaña 	0.03	0.05	0.75
+Campelo	1.00	0.76	0.88
