@@ -1,4 +1,4 @@
-;clams_density;catch_rate;surveillance
-clams_density;1;0.785512706;0.75151127
-catch_rate;0.785512706;1;0.357016881
-surveillance;0.75151127;0.357016881;1
+;biomass;turf.area;Biodiversity
+biomass;1;0.609671314;0.401366732
+turf.area;0.609671314;1;0.752356245
+Biodiversity;0.401366732;0.752356245;1

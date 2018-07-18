@@ -11,7 +11,7 @@ write.csv(es_cor, file = "data2/N1.csv", sep=" ")
 
 #Read recovery potential
 rp <- read.table("data/rp.txt",sep="\t",h=T)
-rp <- es [, c(2:4)]
+rp <- rp [, c(2:4)]
 rp_cor <- cor(rp, use = "pairwise.complete.obs")
 p2 <- corrplot(rp_cor, order ="AOE")
 N2 <-rp_cor
